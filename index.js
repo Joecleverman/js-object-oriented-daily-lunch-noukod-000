@@ -17,8 +17,8 @@ let deliveryId = 0;
     return store.customers.filter(customer => customer.neighborhoodId === this.id);
   };
    meals() {
-    const everyMeal = this.customers().map(customer => customer.meals());
-    const flatten = [].concat.apply([], everyMeal);
+    const listMeal = this.customers().map(customer => customer.meals());
+    const flatten = [].concat.apply([], listMeal);
     return [...new Set(flatten)];
   };
 };
